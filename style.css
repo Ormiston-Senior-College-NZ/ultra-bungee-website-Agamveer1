@@ -1,17 +1,156 @@
 /* fonts */
-
-
-/* site colour palette */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+/* site color palette */
 :root {
-    --color: 
+    --primary-color: #1e3a8a; /* Deep blue */
+    --secondary-color: #facc15; /* Bright yellow */
+    --background: #f4f4f4;
+    --text-color: #333;
+    --button-bg: #dc2626; /* Red */
+    --button-hover: #b91c1c; /* Darker red */
+    --footer-bg: #111827; /* Dark navy */
+    --footer-text: #ecf0f1;
 }
-
-
 /* generic style reset */
-*{
-    margin: 0px;
-    padding: 0px;
+* {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
 }
 
-/* add your own style rules here */
+/* body */
+body {
+    background-color: var(--background);
+    color: var(--text-color);
+}
+
+/* Navigation Bar */
+header {
+    background-color: var(--primary-color);
+    padding: 15px 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.logo {
+    color: var(--secondary-color);
+    font-size: 24px;
+    font-weight: 700;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+    font-size: 18px;
+    transition: all 0.3s ease-in-out;
+    position: relative;
+}
+
+/* Animated underline on hover */
+nav ul li {
+    position: relative;
+}
+
+nav ul li a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 100%;
+    height: 3px;
+    background-color: var(--secondary-color);
+    transform: scale3d(0, 1, 1);  /* Use scale3d instead */
+    transform-origin: right;
+    transition: transform 0.3s ease-in-out;
+}
+
+nav ul li a:hover::after {
+    transform: scale3d(1, 1, 1); /* Hover effect with scale3d */
+}
+
+nav ul li a:hover {
+    color: var(--secondary-color);
+}
+/* Hero Section */
+.hero {
+    background-image: url(bridge3.jpg);
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding: 150px 20px;
+}
+
+.hero h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 20px;
+    font-weight: 300;
+}
+
+/* Jump Section */
+.jump-section {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.jump-section h2 {
+    font-size: 32px;
+    margin-bottom: 30px;
+    font-weight: 600;
+    color: var(--primary-color);
+}
+
+/* Animated Buttons */
+.jump-buttons button {
+    background-color: var(--button-bg);
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 18px;
+    cursor: pointer;
+    margin: 10px;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+}
+
+.jump-buttons button:hover {
+    background-color: var(--button-hover);
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Footer */
+footer {
+    background-color: var(--footer-bg);
+    color: var(--footer-text);
+    text-align: center;
+    padding: 20px;
+    margin-top: 50px;
+}
+
+footer p {
+    font-size: 16px;
+}
