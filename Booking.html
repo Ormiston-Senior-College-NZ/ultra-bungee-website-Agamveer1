@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Book Now - Ultra Bungee</title>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <header>
+        <nav>
+            <div class="logo">Ultra Bungee</div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="jumps.html">Jumps</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <!-- Hero Section -->
+    <section class="book-now-hero">
+        <h1>Book Your Ultimate Bungee Jump Now!</h1>
+        <p>Select your jump experience and secure your slot for a thrilling adventure.</p>
+    </section>
+
+    <!-- Booking Form Section -->
+    <section class="booking-form-section">
+        <div class="booking-box">
+            <h2>Choose Your Jump</h2>
+            <p>128 metres over the Oreti River, with a breathtaking canyon and bridge view.</p>
+            <p><strong>Adult Price:</strong> $180</p>
+            <p><strong>Kids Price:</strong> $150 (Age: 10+, Weight: 35kg minimum)</p>
+            <p><strong>Instructor Jump:</strong> Additional $25 for a tandem jump with an instructor.</p>
+
+            <form class="booking-form">
+                <label for="jump-type">Select Jump Type:</label>
+                <select id="jump-type" name="jump-type">
+                    <option value="bridge">Bridge Jump</option>
+                    <option value="canyon">Canyon Jump</option>
+                    <option value="tower">Tower Jump</option>
+                </select>
+
+                <label for="time-slot">Select Time Slot:</label>
+                <select id="time-slot" name="time-slot">
+                    <option value="10am">10:00 AM</option>
+                    <option value="12pm">12:00 PM</option>
+                    <option value="2pm">2:00 PM</option>
+                </select>
+
+                <label for="adults">Number of Adults:</label>
+                <input type="number" id="adults" name="adults" min="1" max="20" required>
+
+                <label for="kids">Number of Kids:</label>
+                <input type="number" id="kids" name="kids" min="0" max="20">
+
+                <label for="special-requests">Special Requests:</label>
+                <textarea id="special-requests" name="special-requests" rows="4" placeholder="Any special requests or instructions"></textarea>
+
+                <button type="submit">Done</button>
+            </form>
+        </div>
+    </section>
+    <!-- Footer -->
+    <footer>
+        <p>&copy; Ultra Bungee 2024 - Website by Web Makers Inc.</p>
+    </footer>
+</body>
+</html>

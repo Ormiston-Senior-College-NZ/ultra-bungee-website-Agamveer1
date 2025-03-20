@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Gallery - Ultra Bungee</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">Ultra Bungee</div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="jumps.html">Jumps</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section class="gallery-hero">
+        <h1>Ultra Bungee Moments</h1>
+        <p>Check out the thrilling experiences of our jumpers.</p>
+    </section>
+    
+    <section class="gallery-grid">
+        <div class="gallery-item">
+            <img src="bridge3.jpg" alt="Bungee jump 1" onclick="openLightbox(this)">
+        </div>
+        <div class="gallery-item">
+            <img src="canyon1.jpg" alt="canyon1" onclick="openLightbox(this)">
+        </div>
+        <div class="gallery-item">
+            <img src="canyon2.jpg" alt="canyon2" onclick="openLightbox(this)">
+        </div>
+        <div class="gallery-item">
+            <img src="tower1.jpg" alt="Tower jump" onclick="openLightbox(this)">
+        </div>
+            <div class="gallery-item">
+                <img src="tower2.jpg" alt="canyon3" onclick="openLightbox(this)">
+        </div>
+    </section>
+
+    <!-- Lightbox for Fullscreen Image -->
+    <div id="lightbox" class="lightbox">
+        <span class="close-btn" onclick="closeLightbox()">&times;</span>
+        <img id="lightbox-img">
+    </div>
+
+    <footer>
+        <p>&copy; Ultra Bungee 2024 - Website by Web Makers Inc.</p>
+    </footer>
+
+    <script>
+        function openLightbox(img) {
+            document.getElementById("lightbox").style.display = "flex";
+            document.getElementById("lightbox-img").src = img.src;
+        }
+
+        function closeLightbox() {
+            document.getElementById("lightbox").style.display = "none";
+        }
+    </script>
+</body>
+</html>
