@@ -88,6 +88,9 @@ nav ul li a:hover::after {
 nav ul li a:hover {
     color: var(--secondary-color);
 }
+.active a {
+    color:#facc15;
+ }
 
 /* HERO SECTION */
 .hero {
